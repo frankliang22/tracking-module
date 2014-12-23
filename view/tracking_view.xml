@@ -1,0 +1,230 @@
+<openerp>
+  <data>
+
+        <record model="ir.actions.act_window" id="tracking_list_action">
+          <field name="name">Tracking</field>
+          <field name="res_model">tracking.tracking</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+        <p class="oe_view_nocontent_create">Create New Tracking Information</p>
+          
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tracking_form_view">
+             <field name="name">tracking.form</field>
+             <field name="model">tracking.tracking</field>
+             <field name="arch" type="xml" >
+                <form string="Tracking">
+                    <group string="Main Information">
+                       <field name="type" />
+                       <field name="project_id" />
+                       <field name="tier" />
+                       <field name="electronics_type" attrs="{'invisible':[('type','in', ('Driver','System'))]}"/>
+                       <field name="driver_type" attrs="{'invisible':[('type','in', ('Electronics','System'))]}"/>
+                       <field name="system_type" attrs="{'invisible':[('type', 'in', ('Driver','Electronics'))]}"/> 
+                       <field name="version" />
+                       <field name="condition" />
+                       <field name="sample_data1" />
+                       <field name="sample_data2" />
+                       <field name="sample_data3" />                      
+                    </group>
+                    <group string="Other Parameters">
+                       <field name="verification_interval" />
+                       <field name="name" />
+                       <field name="production_serial_number" />
+                    </group>
+                    <notebook colspan="4">
+                      <page string="Sample Data">
+                        <group>
+                        <field name="sample_ids" />
+                        </group>
+                      </page>
+                      <page string="Verification">
+                        <group>
+                        <field name="date_ids" />
+                        </group>
+                      </page>
+                      <page string="Location">
+                        <group string="Check-in">
+                        <field name="check_in_ids" nolabel="1" colspan="4" mode="tree">
+                         <tree string="Checked-in">
+                          <field name="serial_number" />
+                          <field name="time_now" />
+                          <field name="create_uid" />
+                         </tree>
+                        </field>
+                      </group>
+                      <group string="Check-out">
+                        <field name="check_out_ids" nolabel="1" colspan="4" mode="tree">
+                        <tree string="Checked-out">
+                          <field name="serial_number" />
+                          <field name="time_now" />
+                          <field name="use" />
+                          <field name="who" />  
+                          <field name="create_uid" />
+                        </tree>
+                        </field>
+                        </group>
+                      </page> 
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tracking_tree_view">
+            <field name="name">tracking.tree</field>
+            <field name="model">tracking.tracking</field>
+            <field name="arch" type="xml">
+              <tree string="Main Tree" version="7.0">
+                <field name="name" />
+                <field name="project_id" />
+              </tree>
+            </field>
+         </record>
+
+        <record model="ir.ui.view" id="sample_list_view">
+            <field name="name">tracking.form</field>
+            <field name="model">tracking.sample</field>
+            <field name="arch" type="xml">
+                <form string="Sample Data">
+                    <field name="sample_data_x"  colspan="4" />
+                    <field name="sample_data_y"  colspan="4" />
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sample_tree_view">
+            <field name="name">tracking.tree</field>
+            <field name="model">tracking.sample</field>
+            <field name="arch" type="xml">
+                <tree string="Sample Data">
+                    <field name="sample_data_x" />
+                    <field name="sample_data_y" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="verification_list_view">
+            <field name="name">tracking.form</field>
+            <field name="model">tracking.verification</field>
+            <field name="arch" type="xml">
+                <form string="Verification History">
+                    <field name="partner_id"  colspan="4" />
+                    <field name="date" />   
+                    <field name="verification_ids"  />
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="verification_tree_view">
+            <field name="name">tracking.tree</field>
+            <field name="model">tracking.verification</field>
+            <field name="arch" type="xml">
+                <tree string="Verification History">
+                    <field name="partner_id" />
+                    <field name="date" />
+                    <field name="verification_ids"  />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="check_in_list_action">
+          <field name="name">Tracking</field>
+          <field name="res_model">tracking.check_in</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="check_in_form_view">
+             <field name="name">tracking.form</field>
+             <field name="model">tracking.check_in</field>
+             <field name="arch" type="xml" >
+                   <form string="Check In">
+                       <field name="serial_number" />
+                       <field name="time_now" />
+                       <field name="create_uid" />
+                   </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="tracking_check_in_tree_view">
+            <field name="name">tracking.check_in.tree</field>
+            <field name="model">tracking.check_in</field>
+            <field name="arch" type="xml">
+            <tree string="Check In" editable="top">
+               <field name="serial_number" />
+               <field name="time_now" />
+               <field name="create_uid" />
+            </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="check_out_list_action">
+          <field name="name">Tracking</field>
+          <field name="res_model">tracking.check_out</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="tracking_check_out_tree_view">
+            <field name="name">tracking.check_out.tree</field>
+            <field name="model">tracking.check_out</field>
+            <field name="arch" type="xml">
+            <tree string="Check Out" editable="top">
+               <field name="serial_number" />
+               <field name="who" />
+               <field name="use" />
+               <field name="time_now" />
+            </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="check_out_form_view">
+             <field name="name">tracking.form</field>
+             <field name="model">tracking.check_out</field>
+             <field name="arch" type="xml" >
+                   <form string="Check Out">
+                       <field name="serial_number" />
+                       <field name="time_now" />
+                       <field name="use" />
+                       <field name="who" />  
+                       <field name="create_uid" />
+                   </form>
+            </field>
+        </record>
+
+     <!--   <record model="ir.actions.act_window" id="check_list_action">
+          <field name="name">Tracking</field>
+          <field name="res_model">tracking.check</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="check_form_view">
+             <field name="name">tracking.form</field>
+             <field name="model">tracking.check</field>
+             <field name="arch" type="xml" >
+                   <form string="Check">
+                       <field name="serial_number" />
+                       <field name="state" />
+                   </form>
+            </field>
+        </record>
+        -->
+    <menuitem id="main_tracking_menu" name="Tracking" />
+    <menuitem id="tracking_menu" name="Tracking" parent="main_tracking_menu" />
+    <menuitem id="main_menu" name="Tracking Information" parent="tracking_menu" action="tracking_list_action" />
+    <menuitem id="check_in_menu" name="Check In" parent="tracking_menu" action="check_in_list_action" />
+    <menuitem id="check_out_menu" name="Check Out" parent="tracking_menu" action="check_out_list_action" />
+  <!--  <menuitem id="check_menu" name="Check" parent="tracking_menu" action="check_list_action" />
+   -->
+  </data>
+</openerp>
