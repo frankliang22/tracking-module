@@ -1,6 +1,6 @@
 from openerp.osv import fields,osv
 from openerp import tools
-from tools.translate import _
+#from tools.translate import _
 from datetime import datetime
 
 class tracking(osv.Model):

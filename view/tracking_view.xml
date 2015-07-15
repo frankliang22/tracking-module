@@ -17,6 +17,7 @@
              <field name="model">tracking.tracking</field>
              <field name="arch" type="xml" >
                 <form string="Tracking">
+                  <group>
                     <group string="Main Information">
                        <field name="type" />
                        <field name="project_id" />
@@ -41,9 +42,9 @@
                             <field name="location" />
                             <field name="partner_id" />
                             <field name="release_date" />
-                            <field name="user_id" />
-                        
+                            <field name="user_id" />   
                     </group>
+                  </group>
                     <notebook colspan="4">
                       <page string="Sample Data">
                         <group>
@@ -136,8 +137,6 @@
           <field name="res_model">tracking.check</field>
           <field name="view_type">form</field>
           <field name="view_mode">tree,form</field>
-          <field name="help" type="html">
-          </field>
       </record>
 
       <record model="ir.ui.view" id="tracking_tree_view">
@@ -161,6 +160,7 @@
              <field name="model">tracking.check</field>
              <field name="arch" type="xml" >
                    <form string="Check In/Out">
+                    <group>
                        <field name="name" />
                        <field name="project_id" />
                        <field name="who" attrs="{'required':[('state','=','Checked-out')]}"/>
@@ -168,6 +168,7 @@
                        <field name="time_now" />
                        <field name="state" />
                        <field name="create_uid" />
+                    </group>
                    </form>
             </field>
         </record>

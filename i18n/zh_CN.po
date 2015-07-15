@@ -1,13 +1,13 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* tracking
+#	* tracking-module
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0-20140701-231127\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-14 03:39+0000\n"
-"PO-Revision-Date: 2015-01-14 03:39+0000\n"
+"POT-Creation-Date: 2015-07-15 08:14+0000\n"
+"PO-Revision-Date: 2015-07-15 08:14+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,92 +15,8 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: tracking
-#: selection:tracking.check,use:0
-msgid "On Production Line"
-msgstr "在生产线"
-
-#. module: tracking
-#: field:tracking.tracking,production_serial_number:0
-msgid "Production Serial Number"
-msgstr "生产序列号"
-
-#. module: tracking
-#: field:tracking.tracking,date_ids:0
-msgid "Verification History For * Tier"
-msgstr "层次验证历史"
-
-#. module: tracking
-#: selection:tracking.tracking,condition:0
-msgid "Defective-Needs Repair"
-msgstr "有瑕疵 需修理"
-
-#. module: tracking
-#: field:tracking.sample,sample_data_y:0
-msgid "Sample Data Y"
-msgstr "样品数据 Y"
-
-#. module: tracking
-#: field:tracking.sample,sample_data_x:0
-msgid "Sample Data X"
-msgstr "样品数据 X"
-
-#. module: tracking
-#: field:tracking.tracking,sample_data1:0
-msgid "Sample Data 1"
-msgstr "样品数据 1"
-
-#. module: tracking
-#: selection:tracking.check,use:0
-#: field:tracking.location,with_department_member:0
-msgid "With Department Member"
-msgstr "合作部门成员"
-
-#. module: tracking
-#: selection:tracking.check,state:0
-msgid "Checked-out"
-msgstr "被检出"
-
-#. module: tracking
-#: selection:tracking.tracking,type:0
-msgid "System"
-msgstr "系统"
-
-#. module: tracking
-#: selection:tracking.tracking,driver_type:0
-#: selection:tracking.tracking,system_type:0
-msgid "Frequency Response"
-msgstr "频率反应"
-
-#. module: tracking
-#: field:tracking.check,state:0
-msgid "State"
-msgstr "状态"
-
-#. module: tracking
-#: model:ir.actions.act_window,name:tracking.check_list_action
-#: model:ir.actions.act_window,name:tracking.tracking_list_action
-#: model:ir.ui.menu,name:tracking.main_tracking_menu
-#: model:ir.ui.menu,name:tracking.tracking_menu
-#: field:tracking.check,tracking_id:0
-#: field:tracking.sample,tracking_id:0
-#: view:tracking.tracking:0
-#: field:tracking.verification,tracking_id:0
-msgid "Tracking"
-msgstr "追踪"
-
-#. module: tracking
-#: selection:tracking.tracking,tier:0
-msgid "Golden Reference"
-msgstr "黄金参考"
-
-#. module: tracking
-#: field:tracking.tracking,check_ids:0
-msgid "Check In"
-msgstr "检入"
-
-#. module: tracking
-#: model:ir.actions.act_window,help:tracking.tracking_list_action
+#. module: tracking-module
+#: model:ir.actions.act_window,help:tracking-module.tracking_list_action
 msgid "<p class=\"oe_view_nocontent_create\">Create New Tracking Information</p>\n"
 "          \n"
 "            "
@@ -108,304 +24,431 @@ msgstr "<p class=\"oe_view_nocontent_create\">Create New Tracking Information</p
 "          \n"
 "            "
 
-#. module: tracking
-#: field:tracking.tracking,type:0
-msgid "Type"
-msgstr "类型"
-
-#. module: tracking
-#: selection:tracking.tracking,type:0
-msgid "Electronics"
-msgstr "电子"
-
-#. module: tracking
-#: field:tracking.tracking,verification_interval:0
-msgid "Verification Interval"
-msgstr "验证间隔"
-
-#. module: tracking
-#: selection:tracking.tracking,electronics_type:0
-msgid "Audio"
-msgstr "音频"
-
-#. module: tracking
-#: field:tracking.verification,verification_ids:0
-msgid "Related Sample"
-msgstr "相关样品"
-
-#. module: tracking
-#: view:tracking.tracking:0
-msgid "Main Information"
-msgstr "主要信息"
-
-#. module: tracking
-#: field:tracking.check,who:0
-#: field:tracking.verification,partner_id:0
-msgid "Who"
-msgstr "人员"
-
-#. module: tracking
-#: selection:tracking.tracking,type:0
-msgid "Driver"
-msgstr "喇叭"
-
-#. module: tracking
-#: model:ir.model,name:tracking.model_tracking_tracking
-msgid "tracking.tracking"
-msgstr "tracking.tracking"
-
-#. module: tracking
-#: selection:tracking.tracking,electronics_type:0
-#: selection:tracking.tracking,system_type:0
-msgid "Wireless"
-msgstr "无线"
-
-#. module: tracking
-#: model:ir.model,name:tracking.model_tracking_check_out
-msgid "tracking.check_out"
-msgstr "tracking.check_out"
-
-#. module: tracking
-#: field:tracking.check,name:0
-#: field:tracking.tracking,name:0
-msgid "Serial Number"
-msgstr "序列号"
-
-#. module: tracking
-#: sql_constraint:tracking.check:0
-#: sql_constraint:tracking.tracking:0
-msgid "You can not create a duplicate serial number"
-msgstr "不能创建已存在的生产序列号"
-
-#. module: tracking
-#: field:tracking.check,create_uid:0
-msgid "Created by"
-msgstr "创建人员"
-
-#. module: tracking
-#: model:ir.model,name:tracking.model_tracking_verification
-msgid "tracking.verification"
-msgstr "tracking.verification"
-
-#. module: tracking
-#: selection:tracking.check,use:0
-#: field:tracking.location,lent_out:0
-msgid "Lent Out"
-msgstr "被借出"
-
-#. module: tracking
-#: field:tracking.verification,date:0
-msgid "Date"
-msgstr "日期"
-
-#. module: tracking
-#: selection:tracking.tracking,driver_type:0
-#: selection:tracking.tracking,system_type:0
-msgid "Impedance"
-msgstr "阻抗"
-
-#. module: tracking
-#: model:ir.model,name:tracking.model_tracking_sample
-msgid "tracking.sample"
-msgstr "tracking.sample"
-
-#. module: tracking
-#: field:tracking.tracking,condition:0
-msgid "Condition"
-msgstr "情况"
-
-#. module: tracking
-#: view:tracking.verification:0
-msgid "Verification History"
-msgstr "验证历史"
-
-#. module: tracking
-#: model:ir.model,name:tracking.model_tracking_location
-msgid "tracking.location"
-msgstr "tracking.location"
-
-#. module: tracking
-#: model:ir.ui.menu,name:tracking.check_menu
-#: view:tracking.tracking:0
-msgid "Checked In/Out"
-msgstr "被检入/被检出"
-
-#. module: tracking
-#: selection:tracking.tracking,condition:0
-msgid "Defective-Unrepairable"
-msgstr "瑕疵不可修理"
-
-#. module: tracking
-#: selection:tracking.tracking,tier:0
-msgid "Failure Model Sample"
-msgstr "失败模型样品"
-
-#. module: tracking
-#: selection:tracking.tracking,tier:0
-msgid "SW Test Sample"
-msgstr "SW 测试样品"
-
-#. module: tracking
-#: selection:tracking.tracking,tier:0
-msgid "Engineering Sample"
-msgstr "工程样品"
-
-#. module: tracking
-#: model:ir.ui.menu,name:tracking.main_menu
-msgid "Tracking Information"
-msgstr "追踪信息"
-
-#. module: tracking
-#: field:tracking.tracking,driver_type:0
-#: field:tracking.tracking,electronics_type:0
-#: field:tracking.tracking,system_type:0
-msgid "Sub-Type"
-msgstr "子类型"
-
-#. module: tracking
-#: field:tracking.tracking,project_id:0
-msgid "Project/Part Number"
-msgstr "项目/物料号"
-
-#. module: tracking
+#. module: tracking-module
 #: selection:tracking.tracking,condition:0
 msgid "Active"
 msgstr "启动"
 
-#. module: tracking
-#: view:tracking.tracking:0
-msgid "Other Parameters"
-msgstr "其它参数"
-
-#. module: tracking
-#: view:tracking.tracking:0
-msgid "Verification"
-msgstr "验证"
-
-#. module: tracking
-#: field:tracking.check,time_now:0
-msgid "Time"
-msgstr "创建时间"
-
-#. module: tracking
-#: selection:tracking.tracking,condition:0
-msgid "Destroy/Discard/EOL"
-msgstr "损坏的/丢弃的/EOL"
-
-#. module: tracking
-#: selection:tracking.tracking,tier:0
-msgid "Mechanical Sample"
-msgstr "机械样品"
-
-#. module: tracking
-#: selection:tracking.tracking,tier:0
-msgid "Production Reference"
-msgstr "生产参考"
-
-#. module: tracking
-#: selection:tracking.tracking,electronics_type:0
+#. module: tracking-module
 #: selection:tracking.tracking,system_type:0
-msgid "Functional"
-msgstr "功能的"
+msgid "Airleak"
+msgstr "气漏"
 
-#. module: tracking
+#. module: tracking-module
 #: selection:tracking.tracking,driver_type:0
 #: selection:tracking.tracking,electronics_type:0
 #: selection:tracking.tracking,system_type:0
 msgid "All"
 msgstr "所有"
 
-#. module: tracking
-#: model:ir.model,name:tracking.model_tracking_check_in
-msgid "tracking.check_in"
-msgstr "tracking.check_in"
+#. module: tracking-module
+#: field:tracking.tracking,user_id:0
+msgid "Approver"
+msgstr "认同者"
 
-#. module: tracking
-#: selection:tracking.tracking,driver_type:0
-#: selection:tracking.tracking,system_type:0
-msgid "Rub & Buzz"
-msgstr "Rub 和 Buzz"
+#. module: tracking-module
+#: selection:tracking.tracking,electronics_type:0
+msgid "Audio"
+msgstr "音频"
 
-#. module: tracking
-#: field:tracking.tracking,version:0
-msgid "Version/NPI Stage"
-msgstr "版本/NPI 阶段"
+#. module: tracking-module
+#: field:tracking.tracking,check_ids:0
+msgid "Check In"
+msgstr "检入"
 
-#. module: tracking
-#: field:tracking.tracking,tier:0
-msgid "Tier"
-msgstr "层次"
+#. module: tracking-module
+#: view:tracking.check:tracking-module.check_form_view
+#: view:tracking.check:tracking-module.tracking_tree_view
+msgid "Check In/Out"
+msgstr "检入/检出"
 
-#. module: tracking
+#. module: tracking-module
+#: model:ir.ui.menu,name:tracking-module.check_menu
+#: view:tracking.tracking:tracking-module.tracking_form_view
+msgid "Checked In/Out"
+msgstr "被检入/被检出"
+
+#. module: tracking-module
 #: selection:tracking.check,state:0
 msgid "Checked-in"
 msgstr "被检入"
 
-#. module: tracking
-#: field:tracking.tracking,sample_data3:0
-msgid "Sample Data 3"
-msgstr "样品数据 3"
+#. module: tracking-module
+#: selection:tracking.check,state:0
+msgid "Checked-out"
+msgstr "被检出"
 
-#. module: tracking
+#. module: tracking-module
+#: field:tracking.tracking,condition:0
+msgid "Condition"
+msgstr "情况"
+
+#. module: tracking-module
 #: selection:tracking.tracking,system_type:0
 msgid "Cosmetic"
 msgstr "Cosmetic"
 
-#. module: tracking
-#: selection:tracking.tracking,system_type:0
-msgid "Airleak"
-msgstr "气漏"
+#. module: tracking-module
+#: field:tracking.check,create_uid:0
+#: field:tracking.location,create_uid:0
+#: field:tracking.sample,create_uid:0
+#: field:tracking.tracking,create_uid:0
+#: field:tracking.verification,create_uid:0
+msgid "Created by"
+msgstr "创建人员"
 
-#. module: tracking
+#. module: tracking-module
+#: field:tracking.check,create_date:0
+#: field:tracking.location,create_date:0
+#: field:tracking.sample,create_date:0
+#: field:tracking.tracking,create_date:0
+#: field:tracking.verification,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: tracking-module
+#: field:tracking.tracking,partner_id:0
+msgid "Customer"
+msgstr "客户"
+
+#. module: tracking-module
+#: field:tracking.verification,date:0
+msgid "Date"
+msgstr "日期"
+
+#. module: tracking-module
+#: selection:tracking.tracking,condition:0
+msgid "Defective-Needs Repair"
+msgstr "有瑕疵 需修理"
+
+#. module: tracking-module
+#: selection:tracking.tracking,condition:0
+msgid "Defective-Unrepairable"
+msgstr "瑕疵不可修理"
+
+#. module: tracking-module
+#: selection:tracking.tracking,condition:0
+msgid "Destroy/Discard/EOL"
+msgstr "损坏的/丢弃的/EOL"
+
+#. module: tracking-module
 #: selection:tracking.tracking,driver_type:0
 #: selection:tracking.tracking,system_type:0
 msgid "Distortion"
 msgstr "失真"
 
-#. module: tracking
-#: field:tracking.location,scan_location_y:0
-msgid "Scan Location Y"
-msgstr "扫描地点Y"
+#. module: tracking-module
+#: selection:tracking.tracking,type:0
+msgid "Driver"
+msgstr "喇叭"
 
-#. module: tracking
-#: field:tracking.location,scan_location_x:0
-msgid "Scan Location X"
-msgstr "扫描地点X"
+#. module: tracking-module
+#: selection:tracking.tracking,type:0
+msgid "Electronics"
+msgstr "电子"
 
-#. module: tracking
-#: model:ir.model,name:tracking.model_tracking_check
-msgid "tracking.check"
-msgstr "tracking.check"
+#. module: tracking-module
+#: selection:tracking.tracking,tier:0
+msgid "Engineering Sample"
+msgstr "工程样品"
 
-#. module: tracking
-#: view:tracking.sample:0
-#: view:tracking.tracking:0
-#: field:tracking.tracking,sample_ids:0
-msgid "Sample Data"
-msgstr "样品数据"
+#. module: tracking-module
+#: selection:tracking.tracking,tier:0
+msgid "Failure Model Sample"
+msgstr "失败模型样品"
 
-#. module: tracking
-#: view:tracking.check:0
-msgid "Check In/Out"
-msgstr "检入/检出"
+#. module: tracking-module
+#: selection:tracking.tracking,driver_type:0
+#: selection:tracking.tracking,system_type:0
+msgid "Frequency Response"
+msgstr "频率反应"
 
-#. module: tracking
-#: field:tracking.check,use:0
-msgid "Use"
-msgstr "使用"
+#. module: tracking-module
+#: selection:tracking.tracking,electronics_type:0
+#: selection:tracking.tracking,system_type:0
+msgid "Functional"
+msgstr "功能的"
 
-#. module: tracking
+#. module: tracking-module
+#: selection:tracking.tracking,tier:0
+msgid "Golden Reference"
+msgstr "黄金参考"
+
+#. module: tracking-module
+#: field:tracking.check,id:0
+#: field:tracking.location,id:0
+#: field:tracking.sample,id:0
+#: field:tracking.tracking,id:0
+#: field:tracking.verification,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: tracking-module
+#: selection:tracking.tracking,driver_type:0
+#: selection:tracking.tracking,system_type:0
+msgid "Impedance"
+msgstr "阻抗"
+
+#. module: tracking-module
+#: field:tracking.tracking,unit:0
+msgid "Interval Unit"
+msgstr "间隔单位"
+
+#. module: tracking-module
+#: field:tracking.check,write_uid:0
+#: field:tracking.location,write_uid:0
+#: field:tracking.sample,write_uid:0
+#: field:tracking.tracking,write_uid:0
+#: field:tracking.verification,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: tracking-module
+#: field:tracking.check,write_date:0
+#: field:tracking.location,write_date:0
+#: field:tracking.sample,write_date:0
+#: field:tracking.tracking,write_date:0
+#: field:tracking.verification,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: tracking-module
+#: field:tracking.location,lent_out:0
+msgid "Lent Out"
+msgstr "被借出"
+
+#. module: tracking-module
+#: field:tracking.check,location:0
+#: view:tracking.tracking:tracking-module.tracking_form_view
+#: field:tracking.tracking,location:0
+msgid "Location"
+msgstr "地点"
+
+#. module: tracking-module
+#: view:tracking.tracking:tracking-module.tracking_form_view
+msgid "Main Information"
+msgstr "主要信息"
+
+#. module: tracking-module
+#: selection:tracking.tracking,tier:0
+msgid "Mechanical Sample"
+msgstr "机械样品"
+
+#. module: tracking-module
 #: field:tracking.location,on_line:0
 msgid "On Line"
 msgstr "在线"
 
-#. module: tracking
+#. module: tracking-module
+#: view:tracking.tracking:tracking-module.tracking_form_view
+msgid "Other Parameters"
+msgstr "其它参数"
+
+#. module: tracking-module
+#: selection:tracking.tracking,tier:0
+msgid "Production Reference"
+msgstr "生产参考"
+
+#. module: tracking-module
+#: field:tracking.tracking,production_serial_number:0
+msgid "Production Serial Number"
+msgstr "生产序列号"
+
+#. module: tracking-module
+#: field:tracking.check,project_id:0
+#: field:tracking.tracking,project_id:0
+msgid "Project/Part Number"
+msgstr "项目/物料号"
+
+#. module: tracking-module
+#: field:tracking.verification,verification_ids:0
+msgid "Related Sample"
+msgstr "相关样品"
+
+#. module: tracking-module
+#: field:tracking.tracking,release_date:0
+msgid "Release Date"
+msgstr "发布日期"
+
+#. module: tracking-module
+#: selection:tracking.tracking,driver_type:0
+#: selection:tracking.tracking,system_type:0
+msgid "Rub & Buzz"
+msgstr "Rub 和 Buzz"
+
+#. module: tracking-module
+#: selection:tracking.tracking,tier:0
+msgid "SW Test Sample"
+msgstr "SW 测试样品"
+
+#. module: tracking-module
+#: view:tracking.sample:tracking-module.sample_list_view
+#: view:tracking.sample:tracking-module.sample_tree_view
+#: view:tracking.tracking:tracking-module.tracking_form_view
+#: field:tracking.tracking,sample_ids:0
+msgid "Sample Data"
+msgstr "样品数据"
+
+#. module: tracking-module
+#: field:tracking.tracking,sample_data1:0
+msgid "Sample Data 1"
+msgstr "样品数据 1"
+
+#. module: tracking-module
 #: field:tracking.tracking,sample_data2:0
 msgid "Sample Data 2"
 msgstr "样品数据 2"
 
-#. module: tracking
-#: view:tracking.tracking:0
-msgid "Location"
-msgstr "地点"
+#. module: tracking-module
+#: field:tracking.tracking,sample_data3:0
+msgid "Sample Data 3"
+msgstr "样品数据 3"
+
+#. module: tracking-module
+#: field:tracking.sample,sample_data_x:0
+msgid "Sample Data X"
+msgstr "样品数据 X"
+
+#. module: tracking-module
+#: field:tracking.sample,sample_data_y:0
+msgid "Sample Data Y"
+msgstr "样品数据 Y"
+
+#. module: tracking-module
+#: field:tracking.location,scan_location_x:0
+msgid "Scan Location X"
+msgstr "扫描地点X"
+
+#. module: tracking-module
+#: field:tracking.location,scan_location_y:0
+msgid "Scan Location Y"
+msgstr "扫描地点Y"
+
+#. module: tracking-module
+#: field:tracking.check,name:0
+#: field:tracking.tracking,name:0
+msgid "Serial Number"
+msgstr "序列号"
+
+#. module: tracking-module
+#: field:tracking.check,state:0
+msgid "State"
+msgstr "状态"
+
+#. module: tracking-module
+#: field:tracking.tracking,driver_type:0
+#: field:tracking.tracking,electronics_type:0
+#: field:tracking.tracking,system_type:0
+msgid "Sub-Type"
+msgstr "子类型"
+
+#. module: tracking-module
+#: selection:tracking.tracking,type:0
+msgid "System"
+msgstr "系统"
+
+#. module: tracking-module
+#: field:tracking.tracking,tier:0
+msgid "Tier"
+msgstr "层次"
+
+#. module: tracking-module
+#: field:tracking.check,time_now:0
+msgid "Time"
+msgstr "创建时间"
+
+#. module: tracking-module
+#: model:ir.actions.act_window,name:tracking-module.check_list_action
+#: model:ir.actions.act_window,name:tracking-module.tracking_list_action
+#: model:ir.ui.menu,name:tracking-module.main_tracking_menu
+#: model:ir.ui.menu,name:tracking-module.tracking_menu
+#: field:tracking.sample,tracking_id:0
+#: view:tracking.tracking:tracking-module.tracking_form_view
+#: field:tracking.verification,tracking_id:0
+msgid "Tracking"
+msgstr "追踪"
+
+#. module: tracking-module
+#: model:ir.ui.menu,name:tracking-module.main_menu
+msgid "Tracking Information"
+msgstr "追踪信息"
+
+#. module: tracking-module
+#: field:tracking.tracking,type:0
+msgid "Type"
+msgstr "类型"
+
+#. module: tracking-module
+#: view:tracking.tracking:tracking-module.tracking_form_view
+msgid "Verification"
+msgstr "验证"
+
+#. module: tracking-module
+#: view:tracking.verification:tracking-module.verification_list_view
+#: view:tracking.verification:tracking-module.verification_tree_view
+msgid "Verification History"
+msgstr "验证历史"
+
+#. module: tracking-module
+#: field:tracking.tracking,date_ids:0
+msgid "Verification History For * Tier"
+msgstr "层次验证历史"
+
+#. module: tracking-module
+#: field:tracking.tracking,verification_interval:0
+msgid "Verification Interval"
+msgstr "验证间隔"
+
+#. module: tracking-module
+#: field:tracking.tracking,version:0
+msgid "Version/NPI Stage"
+msgstr "版本/NPI 阶段"
+
+#. module: tracking-module
+#: field:tracking.check,who:0
+#: field:tracking.verification,user_id:0
+msgid "Who"
+msgstr "人员"
+
+#. module: tracking-module
+#: selection:tracking.tracking,electronics_type:0
+#: selection:tracking.tracking,system_type:0
+msgid "Wireless"
+msgstr "无线"
+
+#. module: tracking-module
+#: field:tracking.location,with_department_member:0
+msgid "With Department Member"
+msgstr "合作部门成员"
+
+#. module: tracking-module
+#: sql_constraint:tracking.check:0
+#: sql_constraint:tracking.tracking:0
+msgid "You can not create a duplicate serial number"
+msgstr "不能创建已存在的生产序列号"
+
+#. module: tracking-module
+#: selection:tracking.tracking,unit:0
+msgid "days"
+msgstr "days"
+
+#. module: tracking-module
+#: selection:tracking.tracking,unit:0
+msgid "months"
+msgstr "months"
+
+#. module: tracking-module
+#: selection:tracking.tracking,unit:0
+msgid "pieces"
+msgstr "pieces"
+
+#. module: tracking-module
+#: selection:tracking.tracking,unit:0
+msgid "weeks"
+msgstr "weeks"
+
+#. module: tracking-module
+#: selection:tracking.tracking,unit:0
+msgid "years"
+msgstr "years"
 
